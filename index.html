@@ -4,45 +4,140 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PFChecklist</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="images/PFChecklist.png">
 </head>
 <body>
-    <h1>PFChecklist</h1>
-    <p>Welcome to PFChecklist, a simple website designed for project flight!</p>
-    <p>Naviguate with the following links:</p>
-    <nav>
-        <ul>
-            <li><a href="#beforestart">Before start checklist</a></li>
-            <li><a href="#start">Start checklist</a></li>
-        </ul>
-    </nav>
-
-    <div id="#beforestart">
-        <h3>Before start checklist</h3>
-        <ul>
-            <li><input type="checkbox" id="option1">
-                <label for="option1"> Navigation lights</label></li>
-            <li><input type="checkbox" id="option2">
-                <label for="option2">Logo lights</label></li>
-            <li><input type="checkbox" id="option3">
-                <label for="option3">IFR clearance (ATC servers)</label></li>
-        </ul>        
+    <div id="introduction">
+        <h1>PFChecklist</h1>
+        <p>Welcome to PFChecklist, a simple checklist website designed for project flight!</p>
     </div>
 
-    <div id="#start">
-        <h3>Start checklist</h3>
-        <ul>
-            <li><input type="checkbox" id="option1">
-                <label for="option1">Push & Start clearance (ATC servers)</start-up></label></li>
-            <li><input type="checkbox" id="option2">
-                <label for="option2">Beacon lights</label></li>
-            <li><input type="checkbox" id="option3">
-                <label for="option3">Engine 2 start-up</start-up></label></li>
-            <li><input type="checkbox" id="option4">
-                <label for="option4">Engine 1 start-up</start-up></label></li>
 
+    <div id="checklists">
+        <div id="beforestart" class="checklist">
+            <h2>Before start checklist</h3>
+            <ul>
+                <li><input type="checkbox" id="option1" class="button">
+                    <label for="option1"> Navigation lights</label></li>
+                <li><input type="checkbox" id="option2" class="button">
+                    <label for="option2">Logo lights</label></li>
+                <li><input type="checkbox" id="option3" class="button">
+                    <label for="option3">IFR clearance (ATC servers)</label></li>
+            </ul>        
+        </div>
 
-        </ul>
+        <div id="start" class="checklist">
+            <h2>Start checklist</h3>
+            <ul>
+                <li><input type="checkbox" id="pushback" class="button">
+                    <label for="pushback">Pushback (Request in ATC servers) </label></li>
+                <li><input type="checkbox" id="Beacon" class="button">
+                    <label for="Beacon">Beacon lights</label></li>
+                <li><input type="checkbox" id="Engine2" class="button">
+                    <label for="Engine2">Start Engine #2</li>
+                <li><input type="checkbox" id="Engine3" class="button">
+                    <label for="Engine3">Start Engine #1</label></li>
+            </ul>
+        </div>
+        <div id="taxI" class="checklist">
+            <h2>Taxi checklist</h2>
+            <ul>
+                <li><input type="checkbox" id="TaxiLight" class="button">
+                    <label for="TaxiLight">Taxi Light</label></li>
+                <li><input type="checkbox" id="TOflaps" class="button">
+                    <label for="TOflaps">Flaps on T/O</label></li>
+                <li><input type="checkbox" id="flightcontrol" class="button">
+                    <label for="flightcontrol">Flight Control test</label></li>
+                <li><input type="checkbox" id="TaxiInstruction" class="button">
+                    <label for="TaxiInstruction">Taxi Instruction (ATC Servers)</label></li>
+            </ul>
+        </div>
+
+        <div id="beforetakeoff" class="checklist">
+            <h2>Takeoff checklist</h2>
+            <ul>
+                <li><input type="checkbox" id="autopilot" class="button">
+                    <label for="autopilot">Prepare autopilot panel</label></li>
+                <li><input type="checkbox" id="strobe" class="button">
+                    <label for="strobe">Strobe lights</label></li>
+                <li><input type="checkbox" id="LandingLight" class="button">
+                    <label for="LandingLight">Landing Light</label></li>
+                <li><input type="checkbox" id="TakeoffClearance" class="button">
+                    <label for="TakeoffClearance">Get clearance (ATC Server)</label></li>
+            </ul>
+        </div>
+        <div id="afttakeoff" class="checklist">
+            <h2>After Takeoff checklist</h2>
+            <ul>
+                <li><input type="checkbox" id="T-Olights" class="button">
+                    <label for="T-Olights">Turn off Takeoff light</label></li>
+                <li><input type="checkbox" id="gearup" class="button">
+                    <label for="gearup">Gear up</label></li>
+            </ul>
+        </div>
+
+        <div id="beforelanding" class="checklist">
+            <h2>Before Landing checklist</h2>
+            <ul>
+                <li><input type="checkbox" id="flap" class="button">
+                    <label for="flap">Flaps on land</label></li>
+                <li><input type="checkbox" id="FLTSpoilers" class="button">
+                    <label for="FLTSpoilers">Set Spoilers on FLT</label></li>
+                <li><input type="checkbox" id="landlights" class="button">
+                    <label for="landlights">Landing lights</label></li>
+                <li><input type="checkbox" id="geardown" class="button">
+                    <label for="geardown">Gear down</label></li>
+                <li><input type="checkbox" id="Clearance" class="button">
+                    <label for="Clearance">Get Landing Clearance (ATC Server)</label></li>
+            </ul>
+        </div>
+        <div id="landing" class="checklist">
+            <h2>Landing checklist</h2>
+            <ul>
+                <li><input type="checkbox" id="REVSpoilers" class="button">
+                    <label for="REVSpoilers">Spoilers on REV</label></li>
+                <li><input type="checkbox" id="brake" class="button">
+                    <label for="brake">Apply brakes</label></li>
+            </ul>
+        </div>
+        <div id="afterlanding" class="checklist">
+            <h2>After Landing checklist</h2>
+            <ul>
+                <li><input type="checkbox" id="LandingLight" class="button">
+                    <label for="LandingLight">Turn off Landing Light</label></li>
+                <li><input type="checkbox" id="flaps" class="button">
+                    <label for="flaps">Flaps up</label></li>
+                <li><input type="checkbox" id="Spoilers" class="button">
+                    <label for="Spoilers">Spoilers up</label></li>
+            </ul>
+        </div>
+        <div id="taxichecklist" class="checklist">
+            <h2>Taxi checklist</h2>
+            <ul>
+                <li><input type="checkbox" id="TaxiLight" class="button">
+                    <label for="TaxiLight">Taxi Light</label></li>
+                <li><input type="checkbox" id="Instruction" class="button">
+                    <label for="Instruction">Request taxi Instruction (ATC Server)</label></li>
+            </ul>
+        </div>
+        <div id="shutdown" class="checklist">
+            <h2>Shutdown checklist</h2>
+            <ul>
+                <li><input type="checkbox" id="shutdown1" class="button">
+                    <label for="shutdown1">Turn off Engine #1 and #2</label></li>
+                <li><input type="checkbox" id="lights" class="button">
+                    <label for="lights">All lights off</label></li>
+                <li><input type="checkbox" id="bye" class="button">
+                    <label for="bye">Thank the ATC (ATC server)</label></li>
+            </ul>
+        </div>
     </div>
+
+
+    <footer>
+        <p>2026 Yuker. All right reserved</p>
+    </footer>
 
 </body>
 </html>
